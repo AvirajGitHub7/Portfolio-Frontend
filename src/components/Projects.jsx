@@ -32,30 +32,29 @@ const projectData = [
 
 function Projects() {
   return (
-    <div id="projects" className="py-12 px-4 md:px-20 bg-base-100 min-h-screen scroll-mt-20">
-      <h1 className="text-3xl font-bold text-center mb-10">My Projects</h1>
+    <div id="projects" className="py-12 px-4 md:px-20 bg-base-100 dark:bg-gray-900 min-h-screen scroll-mt-20">
+      <h1 className="text-3xl font-bold text-center mb-10 text-black dark:text-white">My Projects</h1>
 
       <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {projectData.map((project, index) => (
           <div
             key={index}
-            className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition flex flex-col items-center text-center"
+            className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-md dark:shadow-gray-700 hover:shadow-lg transition flex flex-col items-center text-center"
           >
             <img
               src={project.image}
               alt={project.title}
-              
               className="mb-4 object-cover w-96 h-48 rounded-md"
             />
-            <h2 className="text-xl font-semibold mb-2">{project.title}</h2>
-            <p className="text-sm text-gray-600 mb-1">{project.tech}</p>
-            <p className="text-sm text-gray-500 italic mb-2">{project.date}</p>
-            <p className="text-gray-700 mb-3">{project.description}</p>
+            <h2 className="text-xl font-semibold mb-2 text-black dark:text-white">{project.title}</h2>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-1">{project.tech}</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 italic mb-2">{project.date}</p>
+            <p className="text-gray-700 dark:text-gray-200 mb-3">{project.description}</p>
             <a
               href={project.link}
               target="_blank"
               rel="noreferrer"
-              className="text-blue-600 hover:underline text-sm break-all"
+              className="text-blue-600 dark:text-blue-400 hover:underline text-sm break-all"
             >
               {project.link}
             </a>

@@ -84,17 +84,16 @@ function Skills() {
 
 
   return (
-   <div id="skills" className="py-10 px-4 md:px-20 bg-base-100 min-h-screen scroll-mt-20">
-  <h1 className="text-3xl font-bold text-center mb-10">My Skills</h1>
+  <div id="skills" className="py-10 px-4 md:px-20 bg-base-100 dark:bg-gray-900 min-h-screen scroll-mt-20 ">
+      <h1 className="text-3xl font-bold text-center mb-10 text-black dark:text-white">My Skills</h1>
 
-  <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
-    {skills.map((skill, index) => (
-      <Cards key={index} props={skill} />
-    ))}
-  </div>
-</div>
-
-  )
+      <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 place-items-center">
+        {skills.map((skill, index) => (
+          <Cards key={index} props={skill} />
+        ))}
+      </div>
+    </div>
+  );
 }
 
 export default Skills
