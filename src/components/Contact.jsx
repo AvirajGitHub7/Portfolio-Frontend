@@ -14,7 +14,10 @@ function Contact() {
      try {
         await axios.post('https://portfolio-backend-d4g4.onrender.com/send', formdata);
         console.log(formdata);
-        setformdata({ name: "", email: "", msg: "" });  // <-- yeh line add karo
+        setTimeout(1000,()=>{
+          setformdata({ name: "", email: "", msg: "" });  
+
+        })
      } catch (error) {
        console.log(error);
      }
