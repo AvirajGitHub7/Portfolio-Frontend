@@ -2,7 +2,13 @@
 import React, { useState, useEffect } from 'react';
 
 function Home() {
- const [theme,settheme]=useState(localStorage.getItem("theme")?localStorage.getItem("theme"):"light")
+const [theme, settheme] = useState(() => {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem("theme") || "light";
+  }
+  return "light";
+});
+
  const DOM_elements=document.documentElement; 
   useEffect(() => {
     if (theme === "dark") {
